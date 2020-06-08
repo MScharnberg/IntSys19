@@ -16,9 +16,22 @@
   * Use model
   * Export model
 
+## Setup
+
+### Requirements
+
+| Package | Version |
+| :- | -:|
+| NumPy | 1.18 |
+| TensorFlow | 2.2.0 |
+| TensorFlow Datasets | 2.1.0 |
+| TensorBoard | 2.2.0 |
+
 ## Data
 
 ### Choose dataset 
+
+* [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
 
 ### Load dataset
 
@@ -30,10 +43,19 @@
 
 ### Choose model 
 
-![Generative Adversarial Network](https://github.com/MScharnberg/IntSys19/tree/documentation/img/GAN.png)
+* [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
+
+![Architecture](./img/GAN.png)
+
+D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x: Original, x': Copy | z: Noise
 
 ### Compile model
 
+* Loss
+  * Binary Crossentropy
+* Optimizer
+  * Adam (Adaptive Moment Estimation)
+  
 ### Train model
 
 ### Evaluate model
@@ -43,12 +65,3 @@
 ### Use model
 
 ### Export model
-
-## Requirements
-
-| Package | Version |
-| :- | -:|
-| NumPy | 1.18 |
-| TensorFlow | 2.2.0 |
-| TensorFlow Datasets | 2.1.0 |
-| TensorBoard | 2.2.0 |
