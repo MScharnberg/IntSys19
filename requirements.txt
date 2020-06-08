@@ -1,0 +1,5 @@
+numpy==1.18
+
+tensorflow==2.2
+tensorflow_datasets==2.1
+tensorboard==2.2
