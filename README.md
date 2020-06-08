@@ -7,6 +7,7 @@
   * Load dataset
   * Explore dataset
   * Preprocess dataset
+  * Visualize dataset
 * Model
   * Choose model 
   * Compile model
@@ -15,6 +16,7 @@
 * Deployment
   * Use model
   * Export model
+  * Export metadata
 
 ## Setup
 
@@ -39,6 +41,8 @@
 
 ### Preprocess dataset
 
+### Visualize dataset
+
 ## Model
 
 ### Choose model 
@@ -52,16 +56,28 @@ D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x
 ### Compile model
 
 * Loss
-  * Binary Crossentropy
+  * Loss function
+    * Binary Crossentropy
+  * Loss metrics
+    * Generator
+    * Discriminator
+    * Real vs. Fake
+  
 * Optimizer
-  * Adam (Adaptive Moment Estimation)
+  * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
   
 ### Train model
 
 ### Evaluate model
+
+* Evaluation metrics
+  * MSE (Mean-squared error)
+  * KLD (Kullback–Leibler divergence)
 
 ## Deployment 
 
 ### Use model
 
 ### Export model
+
+### Export metadata
