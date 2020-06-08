@@ -30,7 +30,7 @@
 
 ### Choose model 
 
-![Generative Adversarial Network](https://github.com/MScharnberg/IntSys19/tree/documentation/img/GAN.svg)
+![Generative Adversarial Network](https://github.com/MScharnberg/IntSys19/tree/documentation/img/GAN.png)
 
 ### Compile model
 
