@@ -48,10 +48,18 @@
 ### Choose model 
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
+  * Generator as generative model
+    * Map imaginary to real data distribution
+    * Copy digits as close to original ones as regression problem
+  * Discriminator as discriminative model
+    * Distinguish imaginary from real data distribution
+    * Differentiate between a digit's copy and original as classification problem
 
 ![Architecture](./img/GAN.png)
 
 D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x: Original, x': Copy | z: Noise
+
+### Explore model
 
 ### Compile model
 
@@ -74,7 +82,7 @@ D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
-  
+
 ### Train model
 
 ### Evaluate model
