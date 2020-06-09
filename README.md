@@ -2,18 +2,18 @@
 
 ## Contents
 
-* Data
+* [Data](https://github.com/MScharnberg/IntSys19/tree/documentation#data)
   * Choose dataset 
   * Load dataset
   * Explore dataset
   * Preprocess dataset
   * Visualize dataset
-* Model
+* [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
   * Choose model 
   * Compile model
   * Train model
   * Evaluate model
-* Deployment
+* [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
   * Use model
   * Export model
   * Export metadata
