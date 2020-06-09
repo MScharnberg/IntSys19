@@ -61,9 +61,11 @@ D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x
 
 #### Objective function
 
-![Discriminator](https://render.githubusercontent.com/render/math?math=%5Cmax_%7BD%7D%20E_%7Bx%20%5Csim%20p_%7Bdata%7D%7D%20%5B%5Clog%20D(x)%5D)
+![Discriminator](https://render.githubusercontent.com/render/math?math=%5Cmax_%7BD%7D%5C%2CE_%7Bx%5Csim%20p_%7Bdata%7D%7D%5C%2C%5Clog(D%5Bx%5D))
 
-![Generator](https://render.githubusercontent.com/render/math?math=%5Cmin_%7BG%7D%20E_%7Bz%20%5Csim%20p_%7Bnoise%7D%7D%20%5B%5Clog%201-D(G(z))%5D)
+![Generator](https://render.githubusercontent.com/render/math?math=%5Cmin_%7BG%7D%5C%2CE_%7Bz%5Csim%20p_%7Bnoise%7D%7D%5C%2C%5Clog(1-D%5BG(z)%5D))
+
+![GAN](https://render.githubusercontent.com/render/math?math=%5Cmin_%7BG%7D%5C%2C%5Cmax_%7BD%7D%5C%2CE_%7Bx%5Csim%20p_%7Bdata%7D%7D%5C%2C%5Clog(D%5Bx%5D)%20%2B%20%5C%2CE_%7Bz%5Csim%20p_%7Bnoise%7D%7D%5C%2C%5Clog(1-D%5BG(z)%5D))
 
 * Loss metrics
   * Generator
