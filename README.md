@@ -20,14 +20,20 @@
 
 ## Setup
 
+### Getting started
+
+OPTION 1: Open [Notebook](#) in [CoLab](#)
+
+OPTION 2: Install requirements via `pip install -r requirements.txt` and run [Script](#) on local machine.
+
 ### Requirements
 
-| Package | Version |
-| :- | -:|
-| NumPy | 1.18 |
-| TensorFlow | 2.2.0 |
-| TensorFlow Datasets | 2.1.0 |
-| TensorBoard | 2.2.0 |
+| Package             | Version |
+|:--------------------|--------:|
+| NumPy               | 1.18    |
+| TensorFlow          | 2.2.0   |
+| TensorFlow Datasets | 2.1.0   |
+| TensorBoard         | 2.2.0   |
 
 ## Data
 
@@ -38,6 +44,10 @@
 ### Load dataset
 
 ### Explore dataset
+
+![Real](#)
+
+Real digits
 
 ### Preprocess dataset
 
@@ -61,19 +71,20 @@ D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x
 
 ### Explore model
 
+![Generator](#)
+
+Generator
+
+![Discriminator](#)
+
+Discriminator
+
 ### Compile model
 
-#### Loss function
-
-![Cross Entropy](https://render.githubusercontent.com/render/math?math=L_%7BCE%7D(p)%3D%20%5Clog(p)%20%2B%20%5Clog(1-p))
-
-#### Objective function
-
-![Discriminator](https://render.githubusercontent.com/render/math?math=%5Cmax_%7BD%7D%5C%2CE_%7Bx%5Csim%20p_%7Bdata%7D%7D%5C%2C%5Clog(D%5Bx%5D))
-
-![Generator](https://render.githubusercontent.com/render/math?math=%5Cmin_%7BG%7D%5C%2CE_%7Bz%5Csim%20p_%7Bnoise%7D%7D%5C%2C%5Clog(1-D%5BG(z)%5D))
-
-![GAN](https://render.githubusercontent.com/render/math?math=%5Cmin_%7BG%7D%5C%2C%5Cmax_%7BD%7D%5C%2CE_%7Bx%5Csim%20p_%7Bdata%7D%7D%5C%2C%5Clog(D%5Bx%5D)%20%2B%20%5C%2CE_%7Bz%5Csim%20p_%7Bnoise%7D%7D%5C%2C%5Clog(1-D%5BG(z)%5D))
+* Loss function
+  * Discriminator
+  * Generator
+  * Discriminator + Generator = GAN
 
 * Loss metrics
   * Generator
@@ -94,6 +105,10 @@ D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x
 ## Deployment 
 
 ### Use model
+
+![Fake](#)
+
+Fake digits
 
 ### Export model
 
