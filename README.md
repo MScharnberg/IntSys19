@@ -11,6 +11,7 @@
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
   * Choose model 
   * Compile model
+  * Explore model
   * Train model
   * Evaluate model
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
@@ -22,9 +23,9 @@
 
 ### Getting started
 
-OPTION 1: Open [Notebook](#) in [CoLab](#)
+RECOMMENDED Option 1: Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
 
-OPTION 2: Install requirements via `pip install -r requirements.txt` and run [Script](#) on local machine.
+Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local machine.
 
 ### Requirements
 
@@ -45,9 +46,8 @@ OPTION 2: Install requirements via `pip install -r requirements.txt` and run [Sc
 
 ### Explore dataset
 
-![Real](#)
-
-Real digits
+![Real](./img/real.png)
+Real data (distribution)
 
 ### Preprocess dataset
 
@@ -65,9 +65,7 @@ Real digits
     * Distinguish imaginary from real data distribution
     * Differentiate between a digit's copy and original as classification problem
 
-![Architecture](./img/GAN.png)
-
-D: Discriminator, G: Generator | p_real/p_noise: Real/Fake data distribution | x: Original, x': Copy | z: Noise
+![GAN](./img/gan.png)
 
 ### Explore model
 
@@ -106,9 +104,8 @@ Discriminator
 
 ### Use model
 
-![Fake](#)
-
-Fake digits
+![Fake](./img/fake.png)
+Fake data (distribution)
 
 ### Export model
 
