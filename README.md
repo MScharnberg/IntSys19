@@ -20,7 +20,7 @@
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
   * Use model
   * Export model
-  * Export metadata
+  * Export metrics
 
 ## Setup
 
@@ -54,9 +54,8 @@
 
 ### Explore dataset
 
-Label distribution
-
 ![Label distribution](./img/label.png)
+Label distribution
 
 ### Preprocess dataset
 
@@ -71,10 +70,10 @@ Real data instances
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
   * Generator as generative model
-    * Map imaginary to real data distribution
+    * Map fake to real data distribution
     * Copy digits as close to original ones as regression problem
   * Discriminator as discriminative model
-    * Distinguish imaginary from real data distribution
+    * Distinguish fake from real data distribution
     * Differentiate between a digit's copy and original as classification problem
 * [CGAN](https://arxiv.org/abs/1411.1784) (Conditional Generative Adversarial Network)
   * Work in Progress
@@ -85,9 +84,11 @@ Generative Adversarial Network
 ### Explore model
 
 ![Generator](./img/generator.png)
+
 Generator architecture
 
 ![Discriminator](./img/discriminator.png)
+
 Discriminator architecture
 
 ### Compile model
@@ -95,7 +96,6 @@ Discriminator architecture
 * Loss
   * Discriminator loss
   * Generator loss
-  
 * Loss metrics
   * Discriminator
   * Generator
@@ -112,9 +112,6 @@ Discriminator architecture
   * MSE (Mean-squared error)
   * KLD (Kullback–Leibler divergence)
 
-* Evaluation tool
-  * View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
-
 ## Deployment 
 
 ### Use model
@@ -124,4 +121,6 @@ Fake data instances
 
 ### Export model
 
-### Export metadata
+### Export metrics
+
+View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
