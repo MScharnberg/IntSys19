@@ -26,9 +26,11 @@
 
 ### Getting started
 
-Option 1 (RECOMMENDED): Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
+Option 1 (RECOMMENDED): Open and run [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/) and enable runtime acceleration via [GPU](https://colab.research.google.com/notebooks/gpu.ipynb) if needed
 
-Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local [Jupyter Notebook](https://jupyter.org/) Server
+Option 2: Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
+
+Option 3: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local console
 
 ### Requirements
 
@@ -44,23 +46,22 @@ Option 2: Install requirements via `pip install -r requirements.txt` and run [Sc
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
-* [HSD Sans]()
+* [HSD Sans](https://www.hs-duesseldorf.de/hochschule/verwaltung/kommunikation/cd/faq/hsdsans)
   * Work in Progress
 
 ### Load dataset
 
 ### Explore dataset
 
-![Label distribution](./img/label.png)
-
 Label distribution
+
+![Label distribution](./img/label.png)
 
 ### Preprocess dataset
 
 ### Visualize dataset
 
 ![Real data](./img/real.png)
-
 Real data instances
 
 ## Model
@@ -74,31 +75,29 @@ Real data instances
   * Discriminator as discriminative model
     * Distinguish imaginary from real data distribution
     * Differentiate between a digit's copy and original as classification problem
-* [CGAN]() (Conditional Generative Adversarial Network)
+* [CGAN](https://arxiv.org/abs/1411.1784) (Conditional Generative Adversarial Network)
   * Work in Progress
 
 ![GAN](./img/gan.png)
+Generative Adversarial Network
 
 ### Explore model
 
 ![Generator](./img/generator.png)
-
 Generator architecture
 
 ![Discriminator](./img/discriminator.png)
-
 Discriminator architecture
 
 ### Compile model
 
-* Loss function
-  * Discriminator
-  * Generator
-  * Discriminator + Generator = GAN
-
+* Loss
+  * Discriminator loss
+  * Generator loss
+  
 * Loss metrics
-  * Generator
   * Discriminator
+  * Generator
   * Real vs. Fake
   
 * Optimizer
@@ -112,12 +111,14 @@ Discriminator architecture
   * MSE (Mean-squared error)
   * KLD (Kullback–Leibler divergence)
 
+* Evaluation tool
+  * View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
+
 ## Deployment 
 
 ### Use model
 
 ![Fake data](./img/fake.png)
-
 Fake data instances
 
 ### Export model
