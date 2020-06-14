@@ -54,9 +54,8 @@
 
 ### Explore dataset
 
-Label distribution
-
 ![Label distribution](./img/label.png)
+Label distribution
 
 ### Preprocess dataset
 
