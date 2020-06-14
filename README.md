@@ -26,11 +26,12 @@
 
 ### Getting started
 
-Option 1 (RECOMMENDED): Open and run [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/) and enable runtime acceleration via [GPU](https://colab.research.google.com/notebooks/gpu.ipynb) if needed
-
-Option 2: Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
-
-Option 3: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local console
+* Option 1 (RECOMMENDED)
+  * Open and run [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/) and enable runtime acceleration via [GPU](https://colab.research.google.com/notebooks/gpu.ipynb) if needed
+* Option 2
+  * Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
+* Option 3
+  * Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local console
 
 ### Requirements
 
