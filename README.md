@@ -1,4 +1,8 @@
-# IntSys19
+# Synthesize handwriting with GANs
+
+Fake digits & letters with Generative Adversarial Networks
+
+[GitHub Repository](https://github.com/MScharnberg/IntSys19)
 
 ## Contents
 
