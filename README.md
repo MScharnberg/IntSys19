@@ -20,7 +20,7 @@
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
   * Use model
   * Export model
-  * Export metadata
+  * Export metrics
 
 ## Setup
 
@@ -85,9 +85,11 @@ Generative Adversarial Network
 ### Explore model
 
 ![Generator](./img/generator.png)
+
 Generator architecture
 
 ![Discriminator](./img/discriminator.png)
+
 Discriminator architecture
 
 ### Compile model
@@ -112,9 +114,6 @@ Discriminator architecture
   * MSE (Mean-squared error)
   * KLD (Kullback–Leibler divergence)
 
-* Evaluation tool
-  * View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
-
 ## Deployment 
 
 ### Use model
@@ -124,4 +123,6 @@ Fake data instances
 
 ### Export model
 
-### Export metadata
+### Export metrics
+
+View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
