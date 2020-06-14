@@ -70,10 +70,10 @@ Real data instances
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
   * Generator as generative model
-    * Map imaginary to real data distribution
+    * Map fake to real data distribution
     * Copy digits as close to original ones as regression problem
   * Discriminator as discriminative model
-    * Distinguish imaginary from real data distribution
+    * Distinguish fake from real data distribution
     * Differentiate between a digit's copy and original as classification problem
 * [CGAN](https://arxiv.org/abs/1411.1784) (Conditional Generative Adversarial Network)
   * Work in Progress
@@ -96,7 +96,6 @@ Discriminator architecture
 * Loss
   * Discriminator loss
   * Generator loss
-  
 * Loss metrics
   * Discriminator
   * Generator
