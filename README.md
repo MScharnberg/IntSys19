@@ -2,7 +2,6 @@
 
 ## Contents
 
-
 * [Setup](https://github.com/MScharnberg/IntSys19/tree/documentation#setup)
   * Getting started
   * Requirements
@@ -53,6 +52,7 @@ Option 2: Install requirements via `pip install -r requirements.txt` and run [Sc
 ### Explore dataset
 
 ![Label distribution](./img/label.png)
+
 Label distribution
 
 ### Preprocess dataset
@@ -60,7 +60,8 @@ Label distribution
 ### Visualize dataset
 
 ![Real data](./img/real.png)
-Real data
+
+Real data instances
 
 ## Model
 
@@ -81,10 +82,12 @@ Real data
 ### Explore model
 
 ![Generator](./img/generator.png)
-Generator
+
+Generator architecture
 
 ![Discriminator](./img/discriminator.png)
-Discriminator
+
+Discriminator architecture
 
 ### Compile model
 
@@ -114,7 +117,8 @@ Discriminator
 ### Use model
 
 ![Fake data](./img/fake.png)
-Fake data
+
+Fake data instances
 
 ### Export model
 
