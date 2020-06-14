@@ -2,6 +2,10 @@
 
 ## Contents
 
+
+* [Setup](https://github.com/MScharnberg/IntSys19/tree/documentation#setup)
+  * Getting started
+  * Requirements
 * [Data](https://github.com/MScharnberg/IntSys19/tree/documentation#data)
   * Choose dataset 
   * Load dataset
@@ -23,9 +27,9 @@
 
 ### Getting started
 
-RECOMMENDED Option 1: Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
+Option 1 (RECOMMENDED): Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
 
-Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local machine.
+Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local [Jupyter Notebook](https://jupyter.org/) Server
 
 ### Requirements
 
@@ -41,17 +45,22 @@ Option 2: Install requirements via `pip install -r requirements.txt` and run [Sc
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
+* [HSD Sans]()
+  * Work in Progress
 
 ### Load dataset
 
 ### Explore dataset
 
-![Real](./img/real.png)
-Real data (distribution)
+![Label distribution](./img/label.png)
+Label distribution
 
 ### Preprocess dataset
 
 ### Visualize dataset
+
+![Real data](./img/real.png)
+Real data
 
 ## Model
 
@@ -64,17 +73,17 @@ Real data (distribution)
   * Discriminator as discriminative model
     * Distinguish imaginary from real data distribution
     * Differentiate between a digit's copy and original as classification problem
+* [CGAN]() (Conditional Generative Adversarial Network)
+  * Work in Progress
 
 ![GAN](./img/gan.png)
 
 ### Explore model
 
-![Generator](#)
-
+![Generator](./img/generator.png)
 Generator
 
-![Discriminator](#)
-
+![Discriminator](./img/discriminator.png)
 Discriminator
 
 ### Compile model
@@ -104,8 +113,8 @@ Discriminator
 
 ### Use model
 
-![Fake](./img/fake.png)
-Fake data (distribution)
+![Fake data](./img/fake.png)
+Fake data
 
 ### Export model
 
