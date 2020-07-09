@@ -48,6 +48,12 @@ Fake digits & letters with Generative Adversarial Networks
 
 ## Data
 
+| Parameter | Value |
+|:-|-:|
+| Batch size | 32 |
+| Input dimension | 28 |
+| Noise dimension | 196 |
+
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
@@ -70,7 +76,20 @@ Real data instances
 
 ## Model
 
-### Choose model 
+| Parameter | Value |
+|:- | -:|
+| Depth | 2 |
+| Epochs | 32 |
+| Activation | ReLU, Leaky ReLU |
+| Architecture | Encoder, Decoder |
+| Initialization | Normal, Xavier |
+| Lerning rate | 0.001, 0.0001 |
+| Normalization | Batch, Group |
+| Optimizer | Adam, LazyAdam |
+
+### Define layers 
+
+### Define model 
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
   * Generator as generative model
@@ -79,8 +98,6 @@ Real data instances
   * Discriminator as discriminative model
     * Distinguish fake from real data distribution
     * Differentiate between a digit's copy and original as classification problem
-* [CGAN](https://arxiv.org/abs/1411.1784) (Conditional Generative Adversarial Network)
-  * Work in Progress
 
 ![GAN](./img/gan.png)
 Generative Adversarial Network
