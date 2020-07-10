@@ -81,13 +81,13 @@ Real data instances
 
 ### Explore model
 
-![Generator](./img/generator.png)
+![Generator](./img/generator_grouped.svg)
 
-Generator architecture
+Generator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
 
-![Discriminator](./img/discriminator.png)
+![Discriminator](./img/discriminator_grouped.svg)
 
-Discriminator architecture
+Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
 
 ### Compile model
 
