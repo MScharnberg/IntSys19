@@ -28,7 +28,9 @@
 
 Option 1 (RECOMMENDED): Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
 
-Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local [Jupyter Notebook](https://jupyter.org/) Server
+Option 2: Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
+
+Option 3: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) in local Python environment 
 
 ### Requirements
 
@@ -44,8 +46,6 @@ Option 2: Install requirements via `pip install -r requirements.txt` and run [Sc
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
-* [HSD Sans]()
-  * Work in Progress
 
 ### Load dataset
 
@@ -98,6 +98,7 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 
 * Loss metrics
   * Generator
+  * Reconstruction
   * Discriminator
   * Real vs. Fake
   
