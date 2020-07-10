@@ -81,11 +81,23 @@ Real data instances
 
 ### Explore model
 
-![Generator](./img/generator_grouped.svg)
+#### Generator
+
+![Generator pipeline](./img/generator_pipeline.png)
+
+Generator pipeline
+
+![Generator architecture](./img/generator_grouped.svg)
 
 Generator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
 
-![Discriminator](./img/discriminator_grouped.svg)
+#### Discriminator
+
+![Discriminator pipeline](./img/discriminator_pipeline.png)
+
+Discriminator pipeline
+
+![Discriminator architecture](./img/discriminator_grouped.svg)
 
 Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
 
