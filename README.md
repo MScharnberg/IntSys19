@@ -22,7 +22,7 @@
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
   * Use model
   * Export model
-  * Export metadata
+  * Export metrics
 
 ## Intro
 
@@ -66,7 +66,6 @@
 ### Explore dataset
 
 ![Label distribution](./img/label.png)
-
 Label distribution
 
 ### Preprocess dataset
@@ -74,7 +73,6 @@ Label distribution
 ### Visualize dataset
 
 ![Real data](./img/real.png)
-
 Real data instances
 
 ## Model
@@ -96,13 +94,14 @@ Real data instances
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
   * Generator as generative model
-    * Map imaginary to real data distribution
+    * Map fake to real data distribution
     * Copy digits as close to original ones as regression problem
   * Discriminator as discriminative model
-    * Distinguish imaginary from real data distribution
+    * Distinguish fake from real data distribution
     * Differentiate between a digit's copy and original as classification problem
 
 ![GAN](./img/gan.png)
+Generative Adversarial Network
 
 ### Explore model
 
@@ -128,11 +127,9 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 
 ### Compile model
 
-* Loss function
-  * Discriminator
-  * Generator
-  * Discriminator + Generator = GAN
-
+* Loss
+  * Discriminator loss
+  * Generator loss
 * Loss metrics
   * Generator
   * Reconstruction
@@ -141,6 +138,7 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
+  * [SGD]()
 
 ### Train model
 
@@ -157,5 +155,8 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 ### Use model
 
 ![Fake data](./img/fake.png)
-
 Fake data instances
+
+### Export metrics
+
+View exemplary hosted evaluation metrics in [TensorBoard](https://tensorboard.dev/experiment/xPmLM55lRsGE7zE9i6PZpA/)
