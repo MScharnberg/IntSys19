@@ -51,6 +51,12 @@ This repository covers the development of deep convolutional neural networks to 
 
 ### Constants
 
+| Parameter | Value |
+|:-|-:|
+| Batch size | 32 |
+| Input dimension | 28 |
+| Noise dimension | 196 |
+
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
@@ -74,6 +80,17 @@ Real data instances
 ## Model
 
 ### Parameters
+
+| Parameter | Value |
+|:- | -:|
+| Depth | 5 |
+| Epochs | X |
+| Activation | ReLU, Leaky ReLU |
+| Architecture | Encoder/Decoder |
+| Initialization | Normal, Xavier |
+| Lerning rate | 0.001, 0.0001 |
+| Normalization | Batch, Group |
+| Optimizer | Adam, SGD |
 
 ### Define model 
 
