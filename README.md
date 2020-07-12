@@ -75,6 +75,7 @@ Label distribution
 ### Visualize dataset
 
 ![Real data](./img/real.png)
+
 Real data instances
 
 ## Model
@@ -109,6 +110,7 @@ Real data instances
     * Differentiate between a digit's copy and original as classification problem
 
 ![GAN](./img/gan.png)
+
 Generative Adversarial Network
 
 ### Explore model
@@ -153,6 +155,8 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   
   ![Loss metrics](./img/loss_metrics.PNG)
   
+Loss metrics
+  
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
   * SGD (Stochastic Gradient Descent)
@@ -167,12 +171,19 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 
 ![Evaluation metrics](./img/evaluation_metrics.PNG)
 
+Evaluation metrics
+
 ## Deployment 
 
 ### Use model
 
 ![Fake data](./img/fake.png)
+
 Fake data instances
+
+![Predictions](./img/predictions.png)
+
+Predictions
 
 ### Export metrics
 
