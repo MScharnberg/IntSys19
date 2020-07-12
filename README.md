@@ -14,6 +14,7 @@
   * Visualize dataset
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
   * Parameters
+  * Define layers
   * Define model 
   * Explore model
   * Compile model
@@ -44,6 +45,7 @@
 |:--------------------|--------:|
 | NumPy               | 1.18    |
 | TensorFlow          | 2.2.0   |
+| TensorFlow Addons   | 0.10.0  |
 | TensorFlow Datasets | 2.1.0   |
 | TensorBoard         | 2.2.0   |
 
@@ -82,17 +84,17 @@ Real data instances
 | Parameter | Value | Info
 |:- | -:| -|
 | Depth | 5 | Number of blocks
-| Epochs | X | Number of epochs to train
+| Epochs | 100 | Number of epochs to train
 | Activation | ReLU, Leaky ReLU | Activation function of block
 | Initialization | Normal, Xavier | Initialization values of filter mask
-| Lerning rate | 0.001, 0.0001 | Learning rate of optimizer algorithm
+| Lerning rate | 0.0001, 0.0002 | Learning rate of optimizer algorithm
 | Normalization | Batch, Group | Normalization technique of block
 | Optimizer | Adam, SGD | Optimizer algorithm
 
 ### Define layers
 
 * Layers per block
-  * Convolutional layer (as feature extractors)
+  * Convolutional layer
   * Normalization layer
   * Activation layer
 
@@ -150,8 +152,8 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
-  * [SGD]() (Stochastic Gradient Descent)
-
+  * SGD (Stochastic Gradient Descent)
+ 
 ### Train model
 
 ![Hyperparameter](./img/hyperparameter.png)
