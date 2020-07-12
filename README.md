@@ -55,7 +55,7 @@
 
 | Parameter | Value |
 |:-|-:|
-| Batch size | 32 |
+| Batch size | 64 |
 | Image dimension | 28 |
 | Noise dimension | 196 |
 
