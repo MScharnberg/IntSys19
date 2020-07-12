@@ -1,4 +1,4 @@
-# IntSys19
+# Synthesize handwriting with GANs
 
 ## Contents
 
@@ -26,7 +26,7 @@
 
 ## Intro
 
-This repository covers the development of deep convolutional neural networks to create fake digits based on adversarial learning techniques. Two models interact with each other in order to predict novel instances of digits. The main program is included in [this](./Train.ipynb) training notebook, whereas inference is implemented in a separate [Notebook](./Test.ipynb). 
+[This](https://github.com/MScharnberg/IntSys19) repository covers the development of deep convolutional neural networks to create fake digits based on adversarial learning techniques. Two models interact with each other in order to predict novel instances of digits. The main program is included in [this](./Train.ipynb) training notebook, whereas inference is implemented in a separate [Notebook](./Test.ipynb). 
 
 ### Getting started
 
