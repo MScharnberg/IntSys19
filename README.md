@@ -143,14 +143,14 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   * Discriminator loss
   * Generator loss
 * Loss metrics
-  * Generator
-  * Reconstruction
-  * Discriminator
-  * Real vs. Fake
+  * Generator fake loss
+  * Generator reconstruction loss
+  * Discriminator fake loss
+  * Discriminator real loss
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
-  * [SGD]()
+  * [SGD]() (Stochastic Gradient Descent)
 
 ### Train model
 
