@@ -1,24 +1,22 @@
 # Synthesize handwriting with GANs
 
-Fake digits & letters with Generative Adversarial Networks
-
-[GitHub Repository](https://github.com/MScharnberg/IntSys19)
-
 ## Contents
 
-* [Setup](https://github.com/MScharnberg/IntSys19/tree/documentation#setup)
+* [Intro](https://github.com/MScharnberg/IntSys19/tree/documentation#intro)
   * Getting started
   * Requirements
 * [Data](https://github.com/MScharnberg/IntSys19/tree/documentation#data)
+  * Constants
   * Choose dataset 
   * Load dataset
   * Explore dataset
   * Preprocess dataset
   * Visualize dataset
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
-  * Choose model 
-  * Compile model
+  * Parameters
+  * Define model 
   * Explore model
+  * Compile model
   * Train model
   * Evaluate model
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
@@ -26,16 +24,19 @@ Fake digits & letters with Generative Adversarial Networks
   * Export model
   * Export metrics
 
-## Setup
+## Intro
+
+[This](https://github.com/MScharnberg/IntSys19) repository covers the development of deep convolutional neural networks to create fake digits based on adversarial learning techniques. Two models interact with each other in order to predict novel instances of digits. The main program is included in [this](./Train.ipynb) training notebook, whereas inference is implemented in a separate [Notebook](./Test.ipynb). 
 
 ### Getting started
 
-* Option 1 (RECOMMENDED)
-  * Open and run [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/) and enable runtime acceleration via [GPU](https://colab.research.google.com/notebooks/gpu.ipynb) if needed
-* Option 2
-  * Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
-* Option 3
-  * Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) on local console
+* Training
+  * Option 1: Open [Notebook](./Train.ipynb) in [CoLab](https://colab.research.google.com/)
+  * Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./train.py) in local Python environment 
+  
+* Testing
+  * Option 1: Open [Notebook](./Test.ipynb) in [CoLab](https://colab.research.google.com/)
+  * Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./test.py) in local Python environment 
 
 ### Requirements
 
@@ -48,6 +49,8 @@ Fake digits & letters with Generative Adversarial Networks
 
 ## Data
 
+### Constants
+
 | Parameter | Value |
 |:-|-:|
 | Batch size | 32 |
@@ -57,8 +60,6 @@ Fake digits & letters with Generative Adversarial Networks
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
-* [HSD Sans](https://www.hs-duesseldorf.de/hochschule/verwaltung/kommunikation/cd/faq/hsdsans)
-  * Work in Progress
 
 ### Load dataset
 
@@ -76,18 +77,18 @@ Real data instances
 
 ## Model
 
+### Parameters
+
 | Parameter | Value |
 |:- | -:|
-| Depth | 2 |
-| Epochs | 32 |
+| Depth | 5 |
+| Epochs | X |
 | Activation | ReLU, Leaky ReLU |
-| Architecture | Encoder, Decoder |
+| Architecture | Encoder/Decoder |
 | Initialization | Normal, Xavier |
 | Lerning rate | 0.001, 0.0001 |
 | Normalization | Batch, Group |
-| Optimizer | Adam, LazyAdam |
-
-### Define layers 
+| Optimizer | Adam, SGD |
 
 ### Define model 
 
@@ -104,13 +105,25 @@ Generative Adversarial Network
 
 ### Explore model
 
-![Generator](./img/generator.png)
+#### Generator
 
-Generator architecture
+![Generator pipeline](./img/generator_pipeline.png)
 
-![Discriminator](./img/discriminator.png)
+Generator pipeline
 
-Discriminator architecture
+![Generator architecture](./img/generator_grouped.svg)
+
+Generator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
+
+#### Discriminator
+
+![Discriminator pipeline](./img/discriminator_pipeline.png)
+
+Discriminator pipeline
+
+![Discriminator architecture](./img/discriminator_grouped.svg)
+
+Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.04394))
 
 ### Compile model
 
@@ -118,14 +131,18 @@ Discriminator architecture
   * Discriminator loss
   * Generator loss
 * Loss metrics
-  * Discriminator
   * Generator
+  * Reconstruction
+  * Discriminator
   * Real vs. Fake
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
+  * [SGD]()
 
 ### Train model
+
+![Hyperparameter](./img/hyperparameter.png)
 
 ### Evaluate model
 
@@ -139,8 +156,6 @@ Discriminator architecture
 
 ![Fake data](./img/fake.png)
 Fake data instances
-
-### Export model
 
 ### Export metrics
 
