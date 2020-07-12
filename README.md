@@ -54,7 +54,7 @@
 | Parameter | Value |
 |:-|-:|
 | Batch size | 32 |
-| Input dimension | 28 |
+| Image dimension | 28 |
 | Noise dimension | 196 |
 
 ### Choose dataset 
@@ -79,16 +79,22 @@ Real data instances
 
 ### Parameters
 
-| Parameter | Value |
-|:- | -:|
-| Depth | 5 |
-| Epochs | X |
-| Activation | ReLU, Leaky ReLU |
-| Architecture | Encoder/Decoder |
-| Initialization | Normal, Xavier |
-| Lerning rate | 0.001, 0.0001 |
-| Normalization | Batch, Group |
-| Optimizer | Adam, SGD |
+| Parameter | Value | Info
+|:- | -:| -|
+| Depth | 5 | Number of blocks
+| Epochs | X | Number of epochs to train
+| Activation | ReLU, Leaky ReLU | Activation function of block
+| Initialization | Normal, Xavier | Initialization values of filter mask
+| Lerning rate | 0.001, 0.0001 | Learning rate of optimizer algorithm
+| Normalization | Batch, Group | Normalization technique of block
+| Optimizer | Adam, SGD | Optimizer algorithm
+
+### Define layers
+
+* Layers per block
+  * Convolutional layer (as feature extractors)
+  * Normalization layer
+  * Activation layer
 
 ### Define model 
 
@@ -104,6 +110,12 @@ Real data instances
 Generative Adversarial Network
 
 ### Explore model
+
+| Model | Parameter | Blocks |
+|:- | -- | -:|
+| Generator | 100,352 | 5 |
+| Discriminator | 100,137 | 5 |
+
 
 #### Generator
 
@@ -131,14 +143,14 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   * Discriminator loss
   * Generator loss
 * Loss metrics
-  * Generator
-  * Reconstruction
-  * Discriminator
-  * Real vs. Fake
+  * Generator fake loss
+  * Generator reconstruction loss
+  * Discriminator fake loss
+  * Discriminator real loss
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
-  * [SGD]()
+  * [SGD]() (Stochastic Gradient Descent)
 
 ### Train model
 
