@@ -82,7 +82,7 @@ Real data instances
 | Parameter | Value | Info
 |:- | -:| -|
 | Depth | 5 | Number of blocks
-| Epochs | X | Number of epochs to train
+| Epochs | 100 | Number of epochs to train
 | Activation | ReLU, Leaky ReLU | Activation function of block
 | Initialization | Normal, Xavier | Initialization values of filter mask
 | Lerning rate | 0.001, 0.0001 | Learning rate of optimizer algorithm
@@ -150,8 +150,8 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
-  * [SGD]() (Stochastic Gradient Descent)
-
+  * SGD (Stochastic Gradient Descent)
+ 
 ### Train model
 
 ![Hyperparameter](./img/hyperparameter.png)
