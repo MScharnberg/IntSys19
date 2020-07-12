@@ -2,16 +2,18 @@
 
 ## Contents
 
-* [Setup](https://github.com/MScharnberg/IntSys19/tree/documentation#setup)
+* [Intro](https://github.com/MScharnberg/IntSys19/tree/documentation#intro)
   * Getting started
   * Requirements
 * [Data](https://github.com/MScharnberg/IntSys19/tree/documentation#data)
+  * Constants
   * Choose dataset 
   * Load dataset
   * Explore dataset
   * Preprocess dataset
   * Visualize dataset
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
+  * Parameters
   * Define model 
   * Explore model
   * Compile model
@@ -22,7 +24,9 @@
   * Export model
   * Export metadata
 
-## Setup
+## Intro
+
+This repository covers the development of deep convolutional neural networks to create fake digits based on adversarial learning techniques. Two models interact with each other in order to predict novel instances of digits. The main program is included in [this](./Train.ipynb) training notebook, whereas inference is implemented in a separate [Notebook](./Test.ipynb). 
 
 ### Getting started
 
@@ -45,6 +49,8 @@
 
 ## Data
 
+### Constants
+
 ### Choose dataset 
 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) (Modified National Institute of Standards and Technology)
@@ -66,6 +72,8 @@ Label distribution
 Real data instances
 
 ## Model
+
+### Parameters
 
 ### Define model 
 
