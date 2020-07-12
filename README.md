@@ -12,9 +12,9 @@
   * Preprocess dataset
   * Visualize dataset
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
-  * Choose model 
-  * Compile model
+  * Define model 
   * Explore model
+  * Compile model
   * Train model
   * Evaluate model
 * [Deployment](https://github.com/MScharnberg/IntSys19/tree/documentation#deployment)
@@ -26,11 +26,13 @@
 
 ### Getting started
 
-Option 1 (RECOMMENDED): Open [Notebook](./Notebook.ipynb) in [CoLab](https://colab.research.google.com/)
-
-Option 2: Install requirements via `pip install -r requirements.txt` and run [Notebook](./Notebook.ipynb) on local [Jupyter Notebook](https://jupyter.org/) Server
-
-Option 3: Install requirements via `pip install -r requirements.txt` and run [Script](./script.py) in local Python environment 
+* Training
+  * Option 1: Open [Notebook](./Train.ipynb) in [CoLab](https://colab.research.google.com/)
+  * Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./train.py) in local Python environment 
+  
+* Testing
+  * Option 1: Open [Notebook](./Test.ipynb) in [CoLab](https://colab.research.google.com/)
+  * Option 2: Install requirements via `pip install -r requirements.txt` and run [Script](./test.py) in local Python environment 
 
 ### Requirements
 
@@ -65,7 +67,7 @@ Real data instances
 
 ## Model
 
-### Choose model 
+### Define model 
 
 * [GAN](https://arxiv.org/abs/1406.2661) (Generative Adversarial Network)
   * Generator as generative model
@@ -74,8 +76,6 @@ Real data instances
   * Discriminator as discriminative model
     * Distinguish imaginary from real data distribution
     * Differentiate between a digit's copy and original as classification problem
-* [CGAN]() (Conditional Generative Adversarial Network)
-  * Work in Progress
 
 ![GAN](./img/gan.png)
 
@@ -119,6 +119,8 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 
 ### Train model
 
+![Hyperparameter](./img/hyperparameter.png)
+
 ### Evaluate model
 
 * Evaluation metrics
@@ -132,7 +134,3 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
 ![Fake data](./img/fake.png)
 
 Fake data instances
-
-### Export model
-
-### Export metadata
