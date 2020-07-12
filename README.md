@@ -14,6 +14,7 @@
   * Visualize dataset
 * [Model](https://github.com/MScharnberg/IntSys19/tree/documentation#model)
   * Parameters
+  * Define layers
   * Define model 
   * Explore model
   * Compile model
@@ -85,14 +86,14 @@ Real data instances
 | Epochs | 100 | Number of epochs to train
 | Activation | ReLU, Leaky ReLU | Activation function of block
 | Initialization | Normal, Xavier | Initialization values of filter mask
-| Lerning rate | 0.001, 0.0001 | Learning rate of optimizer algorithm
+| Lerning rate | 0.0001, 0.0002 | Learning rate of optimizer algorithm
 | Normalization | Batch, Group | Normalization technique of block
 | Optimizer | Adam, SGD | Optimizer algorithm
 
 ### Define layers
 
 * Layers per block
-  * Convolutional layer (as feature extractors)
+  * Convolutional layer
   * Normalization layer
   * Activation layer
 
