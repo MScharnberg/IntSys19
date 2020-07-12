@@ -151,7 +151,7 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
   * Discriminator fake loss
   * Discriminator real loss
   
-  ![Loss metrics](./img/loss_metrics.png)
+  ![Loss metrics](./img/loss_metrics.PNG)
   
 * Optimizer
   * [Adam](https://arxiv.org/abs/1412.6980) (Adaptive Moment Estimation)
@@ -159,17 +159,13 @@ Discriminator architecture (visualized by [Net2Vis](https://arxiv.org/abs/1902.0
  
 ### Train model
 
-![Hyperparameter](./img/hyperparameter.png)
-
-
-
 ### Evaluate model
 
 * Evaluation metrics
   * MSE (Mean-squared error)
   * KLD (Kullback–Leibler divergence)
 
-![Evaluation metrics](./img/evaluation_metrics.png)
+![Evaluation metrics](./img/evaluation_metrics.PNG)
 
 ## Deployment 
 
