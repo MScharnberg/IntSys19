@@ -42,6 +42,7 @@ _SHOWCASE = True #@param ["True", "False"] {type:"raw"}
 import datetime
 import os
 from timeit import default_timer as timer
+from IPython import display
 
 import numpy as np
 print('NumPy version:', np.__version__)
@@ -131,6 +132,7 @@ def get_parameter_dict(parameter):
 
 """## Data
 
+*   Constants
 *   Choose dataset
 *   Load dataset
 *   Explore dataset
@@ -148,7 +150,7 @@ _SHAPE = (_DIM, _DIM, 1) # Image shape
 _SIZE = '[:100%]' # Complete dataset size
 
 if _SHOWCASE:
-  _SIZE = '[:20%]' # Decrease dataset size for showcase
+  _SIZE = '[:10%]' # Decrease dataset size for showcase
 
 """### Choose dataset"""
 
@@ -232,7 +234,7 @@ def normalize(image, label):
 
   return image, label, noise
 
-def preprocess(dataset, shuffle=True, batch=True, prefetch=True):
+def preprocess(dataset, shuffle=True, batch=True, prefetch=False):
   """Preprocess dataset
 
   Preprocess: 
@@ -251,7 +253,8 @@ def preprocess(dataset, shuffle=True, batch=True, prefetch=True):
   dataset = dataset.map(normalize)
   if shuffle: dataset = dataset.shuffle(tf.data.experimental.cardinality(dataset))
   if batch: dataset = dataset.batch(_BS, drop_remainder=True)
-
+  if prefetch: dataset = dataset.prefetch(1)
+  
   return dataset
 
 train_dataset = preprocess(train_dataset)
@@ -282,7 +285,9 @@ visualize(train_dataset)
 
 """## Model
 
-*   Choose model
+*   Parameters
+*   Define layers
+*   Define model
 *   Explore model
 *   Compile model
 *   Train model
@@ -290,9 +295,10 @@ visualize(train_dataset)
 """
 
 _EPOCHS = 100 #@param {type:"slider", min:10, max:100, step:10}
-_LR = 1e-4 # Learning rate
 _DEPTH = 5 # Model depth
-_INPUT = 196 # Generator input
+
+if _SHOWCASE:
+  _EPOCHS = 10  # Decrease training epochs for showcase
 
 """### Parameters"""
 
@@ -304,12 +310,12 @@ def get_parameter():
   """
 
   parameter = {
-    'model/act' : hp.HParam('model/act', hp.Discrete(['relu']), display_name='Activation', description='Layer activation'),
-    'model/init' : hp.HParam('model/init', hp.Discrete(['normal']), display_name='Initialization', description='Weight initialization'),
+    'model/act' : hp.HParam('model/act', hp.Discrete(['relu', 'lrelu']), display_name='Activation', description='Layer activation'),
+    'model/init' : hp.HParam('model/init', hp.Discrete(['normal', 'xavier']), display_name='Initialization', description='Weight initialization'),
     'model/lrd' : hp.HParam('model/lrd', hp.Discrete([1e-4]), display_name='LR', description='Discriminator learning rate'),
     'model/lrg' : hp.HParam('model/lrg', hp.Discrete([2e-4]), display_name='LR', description='Generator learning rate'),
-    'model/opt' : hp.HParam('model/opt', hp.Discrete(['adam']), display_name='Optimizer', description='Optimizer algorithm'),
-    'model/norm' : hp.HParam('model/norm', hp.Discrete(['batch']), display_name='Normalization', description='Layer normalization'),
+    'model/opt' : hp.HParam('model/opt', hp.Discrete(['adam', 'sgd']), display_name='Optimizer', description='Optimizer algorithm'),
+    'model/norm' : hp.HParam('model/norm', hp.Discrete(['batch', 'group']), display_name='Normalization', description='Layer normalization'),
   }
   return parameter
 
@@ -653,6 +659,7 @@ def train_run(dataset, parameter, metrics, checkpoint, manager):
       train_step(batch[0], batch[2], metrics)
 
     if (epoch - 1) % 3 == 0:
+      display.clear_output(wait=True)
       fig = plt.figure()
       fake_images = generator(tf.random.normal((4, _INPUT)), training=False)
 
@@ -683,13 +690,12 @@ def train_run(dataset, parameter, metrics, checkpoint, manager):
 
 """#### Train"""
 
-# Commented out IPython magic to ensure Python compatibility.
 def coldstart():
   check_env()
   if _SHOWCASE:
     print('INFO: Training in showcase mode with reduced dataset size and training epochs...')
-#   %rm -rf logs/ # Remove training logs
-#   %rm -rf ckpt/ # Remove training logs
+  # %rm -rf logs/ # Remove training logs
+  # %rm -rf ckpt/ # Remove training logs
 
 # Commented out IPython magic to ensure Python compatibility.
 # %tensorboard --logdir logs
@@ -754,6 +760,10 @@ for act in parameter['model/act'].domain.values: # Iterate over layer activation
 
 """### Evaluate model"""
 
+# Commented out IPython magic to ensure Python compatibility.
+if _SHOWCASE: # Visualize metrics in TensorBoard
+#   %tensorboard --logdir logs/
+
 fig = plt.figure(figsize=(16, 32))
 
 for i in range(10):
@@ -780,7 +790,8 @@ for i in range(10):
 
   ax2 = fig.add_subplot(10, 3, 3*i + 2)
   ax2.hist([tf.squeeze(fake_output), tf.squeeze(real_output)])
-  ax2.axes.set_xlabel('<- Copy -- Original ->')
+  ax2.axes.set_xticks([-1.5, 0, 1.5])
+  ax2.axes.set_xticklabels(['Copy', 'Unsure', 'Original'])
   ax2.legend(['Fake', 'Real'])
 
   ax3 = fig.add_subplot(10, 3, 3*i + 3)
@@ -831,3 +842,19 @@ plot = False #@param ["False", "True"] {type:"raw"}
 if plot:
   keras.utils.plot_model(generator, to_file='generator.png', show_shapes=True)
   keras.utils.plot_model(discriminator, to_file='discriminator.png', show_shapes=True)
+
+"""### Export metrics"""
+
+upload = False #@param ["False", "True"] {type:"raw"}
+if upload:
+  !tensorboard dev upload --logdir logs \
+      --name "IntSys19" \
+      --description "Intelligent Systems"
+
+download = False #@param ["False", "True"] {type:"raw"}
+if download:
+  !zip -r logs/logs.zip logs/
+
+download = False #@param ["False", "True"] {type:"raw"}
+if download:
+  !zip -r ckpt/ckpt.zip ckpt/
